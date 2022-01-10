@@ -15,7 +15,6 @@ const Index = ({notes}) => {
           <div className="flex flex-col sm:flex-row flex-wrap justify-center">
          
                 <Card notes={notes} />  
-              
           </div>
         </div>
       </>
