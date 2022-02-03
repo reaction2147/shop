@@ -4,7 +4,6 @@ const Card = ({notes}) => {
     return (
         <>
        {notes.map((note) => {
-           console.log(note)
            return(
             <div className="sm:w-1/4 w-1/2 p-8 shadow-lg rounded-lg bg-yellow-50 mx-8 my-2">
                      <div className="text-center py-2">

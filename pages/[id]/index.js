@@ -1,9 +1,12 @@
 import { useState, useEffect } from "react";
 import { useRouter } from "next/router";
+import Link from "next/link";
 
 const Note = ({ note }) => {
   const [deleting, setDeleting] = useState(false);
   const router = useRouter();
+
+  console.log({note})
 
   const deleteNote = async () => {
     const noteID = router.query.id;
@@ -42,9 +45,12 @@ const Note = ({ note }) => {
                 >
                   Delete
                 </button>
-                <button className="bg-green-500 px-6 py-2 rounded-lg text-gray-50 font-medium mx-2 my-1">
+                <Link href={"/[id]/edit"} as={`${note._id}/edit`}>
+                <button 
+                className="bg-green-500 px-6 py-2 rounded-lg text-gray-50 font-medium mx-2 my-1">
                   Edit
                 </button>
+                </Link>
               </div>
             </div>
           </div>

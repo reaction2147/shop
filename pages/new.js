@@ -61,12 +61,11 @@ const NewNote = () => {
         return err;
     }
 
-
   return (
     <div className="flex flex-row justify-center my-40">
-    <div className="w-1/3 p-8 shadow-lg rounded-lg bg-yellow-50 mx-8"> 
+    <div className="w-1/2 p-8 shadow-lg rounded-lg bg-yellow-50 mx-8"> 
     <h1 className="flex flex-row mb-5 text-2xl font-bold mx-auto justify-center text-yellow-500">ADD NEW NOTE</h1>
-    <form onSubmit={handleSubmit} className="w-full max-w-sm justify-center">
+    <form onSubmit={handleSubmit} className="w-full max-w-lg justify-center">
       <div className="md:flex md:items-center mb-6">
         <div className="md:w-1/3">
           <label
@@ -85,6 +84,7 @@ const NewNote = () => {
             name="title"
           />
         </div>
+        <span style={{ color: "red", padding: '1em' }}>{errors.title ? errors.title : null}</span>
       </div>
       <div className="md:flex md:items-center mb-6">
         <div className="md:w-1/3">
@@ -104,6 +104,7 @@ const NewNote = () => {
             name="description"
           />
         </div>
+        <span style={{ color: "red", padding: '1em' }}>{errors.description? errors.description : null}</span>
       </div>
       <div className="md:flex md:justify-center md:ml-28">
        
